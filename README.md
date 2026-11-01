@@ -6,6 +6,8 @@ para esse endereço; o link de exclusão de conta usa `#apagar-conta` — não
 renomear essa âncora).
 
 - `index.html` — a página inteira (estilos dentro do arquivo).
+- `en/index.html`, `es/index.html` — a mesma política em inglês e espanhol
+  (o app abre a do idioma dele). Mudou o texto em português: mudar as três.
 - `fonts/` — fontes do app, servidas daqui (sem Google Fonts).
 - `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png` — o logo do Ascend.
 

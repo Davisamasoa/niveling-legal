@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Ascend</title>
+<meta name="description" content="What data the Ascend app collects, why, where it is kept and how to delete your account.">
+<meta name="theme-color" content="#05070d">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="alternate" hreflang="pt-BR" href="https://davisamasoa.github.io/ascend-legal/">
+<link rel="alternate" hreflang="en" href="https://davisamasoa.github.io/ascend-legal/en/">
+<link rel="alternate" hreflang="es" href="https://davisamasoa.github.io/ascend-legal/es/">
+<style>
+  /* Fonts served from this repo (SIL OFL, see fonts/LICENSE.md) — a privacy page shouldn't call third parties. */
+  @font-face { font-family: "Chakra Petch"; font-weight: 600; font-display: swap; src: url(../fonts/chakra-petch-latin-600-normal.woff2) format("woff2"); }
+  @font-face { font-family: "Chakra Petch"; font-weight: 700; font-display: swap; src: url(../fonts/chakra-petch-latin-700-normal.woff2) format("woff2"); }
+  @font-face { font-family: "Inter"; font-weight: 400; font-display: swap; src: url(../fonts/inter-latin-400-normal.woff2) format("woff2"); }
+  @font-face { font-family: "Inter"; font-weight: 500; font-display: swap; src: url(../fonts/inter-latin-500-normal.woff2) format("woff2"); }
+  @font-face { font-family: "Inter"; font-weight: 600; font-display: swap; src: url(../fonts/inter-latin-600-normal.woff2) format("woff2"); }
+  @font-face { font-family: "JetBrains Mono"; font-weight: 600; font-display: swap; src: url(../fonts/jetbrains-mono-latin-600-normal.woff2) format("woff2"); }
+
+  /* The app's default theme ("Mana") and text colors. Sober on purpose: one accent, hairlines, no glow on body text. */
+  :root {
+    color-scheme: dark;
+    --bg: #05070d;
+    --panel: #0e1420;
+    --border: #243154;
+    --border-soft: #1a2338;
+    --text: #e7ecf7;
+    --muted: #8b97b1;
+    --accent: #5b8cff;
+    --accent-rgb: 91, 140, 255;
+    --f-display: "Chakra Petch", system-ui, sans-serif;
+    --f-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --f-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.7 var(--f-body); -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  strong { font-weight: 600; }
+
+  .page { max-width: 760px; margin: 0 auto; padding: 0 20px 72px; }
+
+  /* Header: the app's brand bar */
+  .brand { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 0; border-bottom: 1px solid var(--border-soft); }
+  .brand a { display: inline-flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font: 700 17px var(--f-display); letter-spacing: 0.22em; }
+  .brand svg { width: 26px; height: 26px; }
+  .langs { display: flex; gap: 4px; }
+  .langs a { font: 600 11px var(--f-mono); letter-spacing: 0.16em; color: var(--muted); text-decoration: none; padding: 6px 8px; border: 1px solid transparent; }
+  .langs a:hover { color: var(--text); }
+  .langs a[aria-current] { color: var(--accent); border-color: var(--border); }
+
+  /* Title block */
+  .doc-head { padding: 48px 0 28px; }
+  .eyebrow { font: 600 12px var(--f-mono); letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); }
+  h1 { font: 700 clamp(30px, 6vw, 42px)/1.15 var(--f-display); margin: 10px 0 14px; }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px 20px; font: 600 12px var(--f-mono); letter-spacing: 0.06em; color: var(--muted); }
+  .intro { margin-top: 24px; }
+  .intro p { margin: 0 0 12px; }
+
+  /* Contents: a quiet version of the app's System window (frame + corner brackets, no glow) */
+  .frame { position: relative; border: 1px solid var(--border); background: var(--panel); padding: 20px 22px; }
+  .frame::before, .frame::after, .frame > .k1, .frame > .k2 { content: ""; position: absolute; width: 9px; height: 9px; border: 0 solid var(--accent); }
+  .frame::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+  .frame::after { top: -1px; right: -1px; border-width: 2px 2px 0 0; }
+  .frame > .k1 { bottom: -1px; left: -1px; border-width: 0 0 2px 2px; }
+  .frame > .k2 { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+  .frame-title { font: 600 11px var(--f-display); letter-spacing: 0.24em; color: var(--muted); margin: 0 0 12px; }
+  .toc ol { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 24px; counter-reset: toc; }
+  .toc li { counter-increment: toc; }
+  .toc a { display: flex; gap: 10px; color: var(--text); text-decoration: none; font-size: 15px; }
+  .toc a::before { content: counter(toc, decimal-leading-zero); font: 600 12px/1.9 var(--f-mono); color: var(--accent); }
+  .toc a:hover { color: var(--accent); }
+  @media (max-width: 560px) { .toc ol { grid-template-columns: minmax(0, 1fr); } }
+
+  /* Sections: numbered heading + the app's fading accent rule */
+  section { padding-top: 40px; }
+  h2 { display: flex; align-items: baseline; gap: 12px; font: 600 21px/1.3 var(--f-display); margin: 0 0 6px; }
+  h2 .n { font: 600 13px var(--f-mono); color: var(--accent); }
+  .rule { height: 1px; margin: 0 0 18px; background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.55), transparent); }
+  section p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin: 6px 0; }
+  li::marker { color: var(--accent); }
+
+  table { width: 100%; border-collapse: collapse; margin: 6px 0 18px; font-size: 15px; }
+  th { text-align: left; font: 600 11px var(--f-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding: 0 12px 10px 0; border-bottom: 1px solid var(--border); }
+  td { text-align: left; vertical-align: top; padding: 14px 12px 14px 0; border-bottom: 1px solid var(--border-soft); }
+  td:first-child { width: 42%; }
+  @media (max-width: 600px) {
+    table, thead, tbody, tr, th, td { display: block; }
+    thead { display: none; }
+    tr { padding: 14px 0; border-bottom: 1px solid var(--border-soft); }
+    td { border: 0; padding: 3px 0; width: auto !important; }
+    td::before { display: block; font: 600 10px var(--f-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+    td:nth-child(1)::before { content: "Data"; margin-top: 0; }
+    td:nth-child(2)::before { content: "What for"; }
+    td:nth-child(3)::before { content: "Where it is kept"; }
+  }
+
+  .note { color: var(--muted); font-size: 15px; }
+  .callout { margin: 4px 0 18px; }
+  .callout p { margin: 0 0 12px; }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout .label { display: block; font: 600 11px var(--f-display); letter-spacing: 0.2em; color: var(--accent); margin-bottom: 2px; }
+
+  footer { margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--border-soft); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; font-size: 14px; color: var(--muted); }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--text); }
+
+  /* Printing / saving as PDF: plain black on white. */
+  @media print {
+    :root { --bg: #fff; --panel: #fff; --text: #111; --muted: #444; --border: #bbb; --border-soft: #ddd; --accent: #1f4fd1; --accent-rgb: 31, 79, 209; }
+    .page { max-width: none; padding: 0; }
+    .toc, .langs, footer { display: none; }
+    section { padding-top: 22px; break-inside: avoid-page; }
+    a { color: var(--text); }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="brand">
+    <a href="https://ascend-gym-levelup.vercel.app/" aria-label="Ascend — website">
+      <svg viewBox="10 10 80 80" aria-hidden="true"><defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="50" y1="10" x2="50" y2="90"><stop offset="0" stop-color="#b9d0ff"/><stop offset=".5" stop-color="#5b8cff"/><stop offset="1" stop-color="#6a4fe0"/></linearGradient></defs><polygon points="50,10 56.5,17.5 50,25 43.5,17.5" fill="url(#g)"/><polygon points="50,30 80,90 67.5,90 50,54.6 32.5,90 20,90" fill="url(#g)"/></svg>
+      ASCEND
+    </a>
+    <nav class="langs" aria-label="Language"><a href="../" lang="pt-BR" hreflang="pt-BR">PT</a><a href="../en/" aria-current="page" lang="en" hreflang="en">EN</a><a href="../es/" lang="es" hreflang="es">ES</a></nav>
+  </header>
+
+  <main>
+    <div class="doc-head">
+      <span class="eyebrow">Privacy and data</span>
+      <h1>Privacy Policy</h1>
+      <div class="meta"><span>Last updated: November 1, 2026</span><span>Brazilian law 13.709/2018 (LGPD)</span></div>
+      <div class="intro">
+        <p>Ascend is a workout app with game elements (level, XP, ranks, achievements). This policy explains what data the app collects, why, where it is kept and how you can delete it. It follows Brazil's General Data Protection Law (LGPD, Law 13.709/2018), the law that applies to the app.</p>
+        <p>Controller of the app and the data: Davi Machado, Ascend's developer. Contact: <a href="mailto:davisamasoa@gmail.com">davisamasoa@gmail.com</a>.</p>
+      </div>
+    </div>
+
+    <nav class="frame toc" aria-label="Contents">
+      <i class="k1"></i><i class="k2"></i>
+      <p class="frame-title">CONTENTS</p>
+      <ol>
+        <li><a href="#dados">Data we collect</a></li>
+        <li><a href="#permissoes">Device permissions</a></li>
+        <li><a href="#compartilhamento">Who the data is shared with</a></li>
+        <li><a href="#retencao">How long we keep it</a></li>
+        <li><a href="#apagar-conta">How to delete your account and data</a></li>
+        <li><a href="#direitos">Your rights (LGPD)</a></li>
+        <li><a href="#criancas">Children</a></li>
+        <li><a href="#mudancas">Changes to this policy</a></li>
+      </ol>
+    </nav>
+
+    <section id="dados">
+      <h2><span class="n">01</span>Data we collect</h2>
+      <div class="rule"></div>
+      <table>
+        <thead><tr><th>Data</th><th>What for</th><th>Where it is kept</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Email</strong> (and, when you sign in with Google, your Google account identifier)</td><td>Creating and accessing your Ascend account.</td><td>Supabase (our account and database provider).</td></tr>
+          <tr><td><strong>Progress in the app</strong>: player name, goal, weight, height, experience level, training plan, logged workouts (exercises, sets, weights, reps), level, gold, achievements, streak and preferences</td><td>Building your training plan, tracking your progress and keeping a backup of it in your account, so you can restore it on another device.</td><td>On your device and, as a backup, on Supabase, linked to your account.</td></tr>
+          <tr><td><strong>Subscription (Ascend Premium)</strong>: if you subscribe, the subscription status (active, in trial, renewal date) and your Ascend account identifier. Payment goes through Google Play — we do <strong>not</strong> receive your card details.</td><td>Unlocking the Premium features on your account, on any device.</td><td>Google Play and RevenueCat (a subscription management service).</td></tr>
+          <tr><td><strong>Training preferences for the AI</strong> (Premium only, when you ask for an AI plan): goal, equipment, experience level, days per week, workout length and split, and the list of available exercises.</td><td>Generating your weekly plan.</td><td>Sent to the AI provider (Groq) through our server (Supabase). We do <strong>not</strong> send your name, email, weight or height.</td></tr>
+          <tr><td><strong>Leagues</strong> (optional, only if you join): player name, the avatar you picked in the app, rank, equipped title, subscriber badge and XP earned in the league.</td><td>Building the ranking of your group's or duel's league (weekly or monthly).</td><td>Supabase. They are <strong>visible to the other players in the same league</strong> (up to 20 people, who join with a code). When you leave a league, you disappear from it right away.</td></tr>
+          <tr><td><strong>Error reports</strong>: the error message, where it happened in the code, device model and Android version</td><td>Finding and fixing app crashes.</td><td>Sentry (an error monitoring service).</td></tr>
+        </tbody>
+      </table>
+      <p>Weight and height are health data (sensitive data under the LGPD). They and your workouts are used with your <strong>consent</strong>, which you give by ticking the checkbox before creating or accessing your account. To withdraw consent, delete your account (section 5).</p>
+      <p>Error reports do <strong>not</strong> include your email, your name, your IP address or the contents of your progress.</p>
+      <p><strong>We do not collect</strong>: location, contacts, photos from your gallery, audio, advertising identifiers or browsing data. The app shows no ads and does not sell or share data for advertising.</p>
+    </section>
+
+    <section id="permissoes">
+      <h2><span class="n">02</span>Device permissions</h2>
+      <div class="rule"></div>
+      <ul>
+        <li><strong>Notifications</strong>: workout and daily quest reminders. They are scheduled on the device itself; nothing is sent to servers.</li>
+        <li><strong>Photos (save to gallery)</strong>: used only when you ask to save an image (weekly report, card for stories). The app writes the image to the gallery; it does not read or upload your photos.</li>
+      </ul>
+    </section>
+
+    <section id="compartilhamento">
+      <h2><span class="n">03</span>Who the data is shared with</h2>
+      <div class="rule"></div>
+      <p>Only with the services that make the app work, which process the data on our behalf and only for that:</p>
+      <ul>
+        <li><strong>Supabase</strong>: accounts and progress backup.</li>
+        <li><strong>Google</strong>: only if you choose to sign in with Google, to confirm your identity.</li>
+        <li><strong>Sentry</strong>: error reports.</li>
+        <li><strong>Google Play and RevenueCat</strong>: only if you subscribe to Ascend Premium — payment and subscription status.</li>
+        <li><strong>Groq</strong> (AI provider): only if you generate an AI plan — it receives only the training preferences described above.</li>
+      </ul>
+      <p>If you join a <strong>league</strong>, your player name, avatar, rank, title, subscriber badge and league XP are shown to the other players in it. No other data of yours is shown to other players.</p>
+      <p>These services may store data on servers outside Brazil. All communication between the app and them is encrypted (HTTPS). We do not sell personal data.</p>
+    </section>
+
+    <section id="retencao">
+      <h2><span class="n">04</span>How long we keep it</h2>
+      <div class="rule"></div>
+      <ul>
+        <li><strong>Account and backup</strong>: for as long as your account exists. When you delete the account, your email and backup are deleted from our servers.</li>
+        <li><strong>Data on the device</strong>: until you delete your progress in the app or uninstall it.</li>
+        <li><strong>Error reports</strong>: deleted automatically by Sentry after the service's retention period (90 days at most).</li>
+      </ul>
+    </section>
+
+    <section id="apagar-conta">
+      <h2><span class="n">05</span>How to delete your account and data</h2>
+      <div class="rule"></div>
+      <div class="frame callout">
+        <i class="k1"></i><i class="k2"></i>
+        <p><span class="label">IN THE APP</span>Settings → Cloud backup → Delete account. The account and the cloud backup are deleted immediately and permanently.</p>
+        <p><span class="label">WITHOUT THE APP</span>For example, if you already uninstalled it: email <a href="mailto:davisamasoa@gmail.com?subject=Delete%20my%20Ascend%20account">davisamasoa@gmail.com</a> with the subject “Delete my Ascend account”, from the email registered in the account. We delete the account and the backup within 30 days and confirm by email.</p>
+      </div>
+      <p class="note">To delete only the progress on the device, without deleting the account: Settings → Delete progress.</p>
+    </section>
+
+    <section id="direitos">
+      <h2><span class="n">06</span>Your rights (LGPD)</h2>
+      <div class="rule"></div>
+      <p>You can ask at any time for: confirmation that we process your data, access to it, correction, a copy (portability) and deletion. The app already lets you export your progress to a file (Settings → File backup) and delete your account. For any other request, write to the contact above.</p>
+    </section>
+
+    <section id="criancas">
+      <h2><span class="n">07</span>Children</h2>
+      <div class="rule"></div>
+      <p>Ascend is not intended for children under 13 and does not knowingly collect their data. If you know of an account belonging to a child, write to the contact above and it will be deleted.</p>
+    </section>
+
+    <section id="mudancas">
+      <h2><span class="n">08</span>Changes to this policy</h2>
+      <div class="rule"></div>
+      <p>If this policy changes, the date at the top will be updated and, if the change is significant, we will let you know in the app. The Portuguese version is the original; if the translations differ, the Portuguese version prevails.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Ascend · Davi Machado</span>
+    <span><a href="mailto:davisamasoa@gmail.com">Contact</a> · <a href="https://ascend-gym-levelup.vercel.app/">Ascend website</a></span>
+  </footer>
+</div>
+</body>
+</html>
