@@ -13,7 +13,7 @@
 <link rel="alternate" hreflang="en" href="https://davisamasoa.github.io/niveling-legal/en/">
 <link rel="alternate" hreflang="es" href="https://davisamasoa.github.io/niveling-legal/es/">
 <style>
-  /* Fonts served from this repo (SIL OFL, see fonts/LICENSE.md) — a privacy page shouldn't call third parties. */
+  /* Fonts served from this repo (SIL OFL, see fonts/LICENSE.md): a privacy page shouldn't call third parties. */
   @font-face { font-family: "Chakra Petch"; font-weight: 600; font-display: swap; src: url(fonts/chakra-petch-latin-600-normal.woff2) format("woff2"); }
   @font-face { font-family: "Chakra Petch"; font-weight: 700; font-display: swap; src: url(fonts/chakra-petch-latin-700-normal.woff2) format("woff2"); }
   @font-face { font-family: "Inter"; font-weight: 400; font-display: swap; src: url(fonts/inter-latin-400-normal.woff2) format("woff2"); }
@@ -138,7 +138,7 @@
     <div class="doc-head">
       <span class="eyebrow">Privacidade e dados</span>
       <h1>Política de Privacidade</h1>
-      <div class="meta"><span>Última atualização: 1 de novembro de 2026</span><span>Lei 13.709/2018 (LGPD)</span></div>
+      <div class="meta"><span>Última atualização: 11 de novembro de 2026</span><span>Lei 13.709/2018 (LGPD)</span></div>
       <div class="intro">
         <p>O Niveling é um aplicativo de treino com elementos de jogo (nível, XP, ranks, conquistas). Esta política explica quais dados o app coleta, por que, onde eles ficam e como você pode apagá-los. Ela segue a Lei Geral de Proteção de Dados (LGPD, Lei 13.709/2018).</p>
         <p>Responsável pelo app e pelos dados: Davi Machado, desenvolvedor do Niveling. Contato: <a href="mailto:davisamasoa@gmail.com">davisamasoa@gmail.com</a>.</p>
@@ -169,9 +169,10 @@
           <tr><td><strong>E-mail</strong> (e, no login com Google, o identificador da sua conta Google)</td><td>Criar e acessar a sua conta no Niveling.</td><td>Supabase (nosso provedor de contas e banco de dados).</td></tr>
           <tr><td><strong>Progresso no app</strong>: nome de jogador, objetivo, peso, altura, nível de experiência, plano de treino, treinos registrados (exercícios, séries, cargas, repetições), nível, ouro, conquistas, streak e preferências</td><td>Montar o seu plano de treino, calcular a sua evolução e guardar o backup do seu progresso na sua conta, para recuperá-lo em outro aparelho.</td><td>No seu aparelho e, como backup, no Supabase, ligado à sua conta.</td></tr>
           <tr><td><strong>Assinatura (Niveling Premium)</strong>: se você assinar, o status da assinatura (ativa, em teste, data de renovação) e o identificador da sua conta no Niveling. O pagamento é feito pelo Google Play. <strong>Não</strong> recebemos dados do seu cartão.</td><td>Liberar os recursos Premium na sua conta, em qualquer aparelho.</td><td>Google Play e RevenueCat (serviço que gerencia assinaturas).</td></tr>
-          <tr><td><strong>Preferências de treino para a IA</strong> (só no Premium, quando você pede um plano por IA): objetivo, equipamento, nível de experiência, dias por semana, duração e divisão do treino, e a lista de exercícios disponíveis.</td><td>Gerar o seu plano semanal.</td><td>Enviadas ao provedor de IA (Groq) através do nosso servidor (Supabase). <strong>Não</strong> enviamos nome, e-mail, peso nem altura.</td></tr>
+          <tr><td><strong>Dados de treino para a IA</strong> (só no Premium, quando você pede um plano por IA ou a revisão da semana da IA treinadora): objetivo, equipamento, nível de experiência, dias por semana, duração e divisão do treino, a lista de exercícios disponíveis e o pedido que você escrever (que pode falar de dor ou lesão, se você contar). Na revisão da semana, também as séries feitas, a tendência e a melhor carga de cada exercício.</td><td>Gerar ou ajustar o seu plano semanal.</td><td>Enviados ao provedor de IA (Groq) através do nosso servidor (Supabase). <strong>Não</strong> enviamos nome, e-mail, peso nem altura. Se o pedido escrito falar da sua saúde, esse texto também é dado de saúde: escreva só o que quiser que a IA leve em conta.</td></tr>
           <tr><td><strong>Ligas</strong> (opcional, só se você entrar): nome de jogador, avatar escolhido no app, rank, título equipado, selo de assinante e XP ganho na liga.</td><td>Montar o ranking da liga (semanal ou mensal) do seu grupo ou duelo.</td><td>Supabase. Ficam <strong>visíveis para os outros jogadores da mesma liga</strong> (até 20 pessoas, que entram por um código). Ao sair da liga, você some dela na hora.</td></tr>
           <tr><td><strong>Relatórios de erro</strong>: a mensagem do erro, onde ele aconteceu no código, modelo do aparelho e versão do Android</td><td>Encontrar e corrigir falhas do app.</td><td>Sentry (serviço de monitoramento de erros).</td></tr>
+          <tr><td><strong>Atualizações do app</strong>: versão do app, plataforma e canal de atualização</td><td>Baixar correções do app sem passar pela loja.</td><td>Expo (serviço de atualizações). Nenhum dado do seu progresso é enviado.</td></tr>
         </tbody>
       </table>
       <p>Peso e altura são dados de saúde (dados sensíveis na LGPD). Eles e os seus treinos são usados com o seu <strong>consentimento</strong>, que você dá ao marcar a caixa de aceite antes de criar ou acessar a conta. Para retirar o consentimento, apague a conta (seção 5).</p>
@@ -197,7 +198,8 @@
         <li><strong>Google</strong>: apenas se você escolher entrar com o Google, para confirmar a sua identidade.</li>
         <li><strong>Sentry</strong>: relatórios de erro.</li>
         <li><strong>Google Play e RevenueCat</strong>: apenas se você assinar o Niveling Premium: pagamento e status da assinatura.</li>
-        <li><strong>Groq</strong> (provedor de IA): apenas se você gerar um plano por IA: recebe só as preferências de treino descritas acima.</li>
+        <li><strong>Groq</strong> (provedor de IA): apenas se você usar a IA (plano ou revisão da semana): recebe só os dados de treino descritos acima.</li>
+        <li><strong>Expo</strong>: atualizações do app (dados técnicos, sem o seu progresso).</li>
       </ul>
       <p>Se você entrar numa <strong>liga</strong>, o seu nome de jogador, avatar, rank, título, selo de assinante e XP da liga aparecem para os outros jogadores dela. Nenhum outro dado seu é mostrado a outros jogadores.</p>
       <p>Esses serviços podem guardar dados em servidores fora do Brasil. Toda comunicação entre o app e eles é criptografada (HTTPS). Não vendemos dados pessoais.</p>

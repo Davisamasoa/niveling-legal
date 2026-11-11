@@ -13,7 +13,7 @@
 <link rel="alternate" hreflang="en" href="https://davisamasoa.github.io/niveling-legal/en/">
 <link rel="alternate" hreflang="es" href="https://davisamasoa.github.io/niveling-legal/es/">
 <style>
-  /* Fonts served from this repo (SIL OFL, see fonts/LICENSE.md) — a privacy page shouldn't call third parties. */
+  /* Fonts served from this repo (SIL OFL, see fonts/LICENSE.md): a privacy page shouldn't call third parties. */
   @font-face { font-family: "Chakra Petch"; font-weight: 600; font-display: swap; src: url(../fonts/chakra-petch-latin-600-normal.woff2) format("woff2"); }
   @font-face { font-family: "Chakra Petch"; font-weight: 700; font-display: swap; src: url(../fonts/chakra-petch-latin-700-normal.woff2) format("woff2"); }
   @font-face { font-family: "Inter"; font-weight: 400; font-display: swap; src: url(../fonts/inter-latin-400-normal.woff2) format("woff2"); }
@@ -138,7 +138,7 @@
     <div class="doc-head">
       <span class="eyebrow">Privacidad y datos</span>
       <h1>Política de privacidad</h1>
-      <div class="meta"><span>Última actualización: 1 de noviembre de 2026</span><span>Ley brasileña 13.709/2018 (LGPD)</span></div>
+      <div class="meta"><span>Última actualización: 11 de noviembre de 2026</span><span>Ley brasileña 13.709/2018 (LGPD)</span></div>
       <div class="intro">
         <p>Niveling es una app de entrenamiento con elementos de juego (nivel, XP, rangos, logros). Esta política explica qué datos recopila la app, para qué, dónde se guardan y cómo puedes borrarlos. Sigue la Ley General de Protección de Datos de Brasil (LGPD, Ley 13.709/2018), la ley que se aplica a la app.</p>
         <p>Responsable de la app y de los datos: Davi Machado, desarrollador de Niveling. Contacto: <a href="mailto:davisamasoa@gmail.com">davisamasoa@gmail.com</a>.</p>
@@ -169,9 +169,10 @@
           <tr><td><strong>Correo electrónico</strong> (y, si inicias sesión con Google, el identificador de tu cuenta de Google)</td><td>Crear tu cuenta de Niveling y acceder a ella.</td><td>Supabase (nuestro proveedor de cuentas y base de datos).</td></tr>
           <tr><td><strong>Progreso en la app</strong>: nombre de jugador, objetivo, peso, altura, nivel de experiencia, rutina de entrenamiento, entrenamientos registrados (ejercicios, series, pesos, repeticiones), nivel, oro, logros, racha y preferencias</td><td>Armar tu rutina, calcular tu progreso y guardar una copia de él en tu cuenta, para recuperarlo en otro dispositivo.</td><td>En tu dispositivo y, como copia, en Supabase, vinculada a tu cuenta.</td></tr>
           <tr><td><strong>Suscripción (Niveling Premium)</strong>: si te suscribes, el estado de la suscripción (activa, en prueba, fecha de renovación) y el identificador de tu cuenta de Niveling. El pago se hace por Google Play. <strong>No</strong> recibimos los datos de tu tarjeta.</td><td>Activar las funciones Premium en tu cuenta, en cualquier dispositivo.</td><td>Google Play y RevenueCat (servicio que gestiona suscripciones).</td></tr>
-          <tr><td><strong>Preferencias de entrenamiento para la IA</strong> (solo en Premium, cuando pides un plan con IA): objetivo, equipamiento, nivel de experiencia, días por semana, duración y división del entrenamiento, y la lista de ejercicios disponibles.</td><td>Generar tu plan semanal.</td><td>Se envían al proveedor de IA (Groq) a través de nuestro servidor (Supabase). <strong>No</strong> enviamos tu nombre, correo, peso ni altura.</td></tr>
+          <tr><td><strong>Datos de entrenamiento para la IA</strong> (solo en Premium, cuando pides un plan con IA o la revisión semanal del entrenador IA): objetivo, equipamiento, nivel de experiencia, días por semana, duración y división del entrenamiento, la lista de ejercicios disponibles y el pedido que escribas (que puede hablar de dolor o lesión, si lo cuentas). En la revisión semanal, también las series hechas, la tendencia y la mejor carga de cada ejercicio.</td><td>Generar o ajustar tu plan semanal.</td><td>Se envían al proveedor de IA (Groq) a través de nuestro servidor (Supabase). <strong>No</strong> enviamos tu nombre, correo, peso ni altura. Si tu pedido escrito habla de tu salud, ese texto también es un dato de salud: escribe solo lo que quieras que la IA tenga en cuenta.</td></tr>
           <tr><td><strong>Ligas</strong> (opcional, solo si entras): nombre de jugador, avatar elegido en la app, rango, título equipado, insignia de suscriptor y XP ganado en la liga.</td><td>Armar la clasificación de la liga (semanal o mensual) de tu grupo o duelo.</td><td>Supabase. Son <strong>visibles para los demás jugadores de la misma liga</strong> (hasta 20 personas, que entran con un código). Al salir de la liga, desapareces de ella al instante.</td></tr>
           <tr><td><strong>Informes de error</strong>: el mensaje del error, dónde ocurrió en el código, modelo del dispositivo y versión de Android</td><td>Encontrar y corregir fallos de la app.</td><td>Sentry (servicio de monitoreo de errores).</td></tr>
+          <tr><td><strong>Actualizaciones de la app</strong>: versión de la app, plataforma y canal de actualización</td><td>Descargar correcciones de la app sin pasar por la tienda.</td><td>Expo (servicio de actualizaciones). No se envía nada de tu progreso.</td></tr>
         </tbody>
       </table>
       <p>El peso y la altura son datos de salud (datos sensibles según la LGPD). Estos datos y tus entrenamientos se usan con tu <strong>consentimiento</strong>, que das al marcar la casilla antes de crear tu cuenta o acceder a ella. Para retirar el consentimiento, borra la cuenta (sección 5).</p>
@@ -197,7 +198,8 @@
         <li><strong>Google</strong>: solo si eliges iniciar sesión con Google, para confirmar tu identidad.</li>
         <li><strong>Sentry</strong>: informes de error.</li>
         <li><strong>Google Play y RevenueCat</strong>: solo si te suscribes a Niveling Premium: pago y estado de la suscripción.</li>
-        <li><strong>Groq</strong> (proveedor de IA): solo si generas un plan con IA: recibe solo las preferencias de entrenamiento descritas arriba.</li>
+        <li><strong>Groq</strong> (proveedor de IA): solo si usas la IA (plan o revisión semanal): recibe solo los datos de entrenamiento descritos arriba.</li>
+        <li><strong>Expo</strong>: actualizaciones de la app (datos técnicos, nada de tu progreso).</li>
       </ul>
       <p>Si entras en una <strong>liga</strong>, tu nombre de jugador, avatar, rango, título, insignia de suscriptor y XP de la liga se muestran a los demás jugadores de ella. Ningún otro dato tuyo se muestra a otros jugadores.</p>
       <p>Estos servicios pueden guardar datos en servidores fuera de Brasil. Toda la comunicación entre la app y ellos está cifrada (HTTPS). No vendemos datos personales.</p>

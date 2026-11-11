@@ -13,7 +13,7 @@
 <link rel="alternate" hreflang="en" href="https://davisamasoa.github.io/niveling-legal/en/">
 <link rel="alternate" hreflang="es" href="https://davisamasoa.github.io/niveling-legal/es/">
 <style>
-  /* Fonts served from this repo (SIL OFL, see fonts/LICENSE.md) — a privacy page shouldn't call third parties. */
+  /* Fonts served from this repo (SIL OFL, see fonts/LICENSE.md): a privacy page shouldn't call third parties. */
   @font-face { font-family: "Chakra Petch"; font-weight: 600; font-display: swap; src: url(../fonts/chakra-petch-latin-600-normal.woff2) format("woff2"); }
   @font-face { font-family: "Chakra Petch"; font-weight: 700; font-display: swap; src: url(../fonts/chakra-petch-latin-700-normal.woff2) format("woff2"); }
   @font-face { font-family: "Inter"; font-weight: 400; font-display: swap; src: url(../fonts/inter-latin-400-normal.woff2) format("woff2"); }
@@ -138,7 +138,7 @@
     <div class="doc-head">
       <span class="eyebrow">Privacy and data</span>
       <h1>Privacy Policy</h1>
-      <div class="meta"><span>Last updated: November 1, 2026</span><span>Brazilian law 13.709/2018 (LGPD)</span></div>
+      <div class="meta"><span>Last updated: November 11, 2026</span><span>Brazilian law 13.709/2018 (LGPD)</span></div>
       <div class="intro">
         <p>Niveling is a workout app with game elements (level, XP, ranks, achievements). This policy explains what data the app collects, why, where it is kept and how you can delete it. It follows Brazil's General Data Protection Law (LGPD, Law 13.709/2018), the law that applies to the app.</p>
         <p>Controller of the app and the data: Davi Machado, Niveling's developer. Contact: <a href="mailto:davisamasoa@gmail.com">davisamasoa@gmail.com</a>.</p>
@@ -169,9 +169,10 @@
           <tr><td><strong>Email</strong> (and, when you sign in with Google, your Google account identifier)</td><td>Creating and accessing your Niveling account.</td><td>Supabase (our account and database provider).</td></tr>
           <tr><td><strong>Progress in the app</strong>: player name, goal, weight, height, experience level, training plan, logged workouts (exercises, sets, weights, reps), level, gold, achievements, streak and preferences</td><td>Building your training plan, tracking your progress and keeping a backup of it in your account, so you can restore it on another device.</td><td>On your device and, as a backup, on Supabase, linked to your account.</td></tr>
           <tr><td><strong>Subscription (Niveling Premium)</strong>: if you subscribe, the subscription status (active, in trial, renewal date) and your Niveling account identifier. Payment goes through Google Play. We do <strong>not</strong> receive your card details.</td><td>Unlocking the Premium features on your account, on any device.</td><td>Google Play and RevenueCat (a subscription management service).</td></tr>
-          <tr><td><strong>Training preferences for the AI</strong> (Premium only, when you ask for an AI plan): goal, equipment, experience level, days per week, workout length and split, and the list of available exercises.</td><td>Generating your weekly plan.</td><td>Sent to the AI provider (Groq) through our server (Supabase). We do <strong>not</strong> send your name, email, weight or height.</td></tr>
+          <tr><td><strong>Training data for the AI</strong> (Premium only, when you ask for an AI plan or the AI coach's weekly review): goal, equipment, experience level, days per week, workout length and split, the list of available exercises and the request you write (which may mention pain or an injury, if you say so). For the weekly review, also the sets done, the trend and the best load of each exercise.</td><td>Generating or adjusting your weekly plan.</td><td>Sent to the AI provider (Groq) through our server (Supabase). We do <strong>not</strong> send your name, email, weight or height. If your written request mentions your health, that text is health data too: write only what you want the AI to take into account.</td></tr>
           <tr><td><strong>Leagues</strong> (optional, only if you join): player name, the avatar you picked in the app, rank, equipped title, subscriber badge and XP earned in the league.</td><td>Building the ranking of your group's or duel's league (weekly or monthly).</td><td>Supabase. They are <strong>visible to the other players in the same league</strong> (up to 20 people, who join with a code). When you leave a league, you disappear from it right away.</td></tr>
           <tr><td><strong>Error reports</strong>: the error message, where it happened in the code, device model and Android version</td><td>Finding and fixing app crashes.</td><td>Sentry (an error monitoring service).</td></tr>
+          <tr><td><strong>App updates</strong>: app version, platform and update channel</td><td>Downloading app fixes without going through the store.</td><td>Expo (an update service). None of your progress is sent.</td></tr>
         </tbody>
       </table>
       <p>Weight and height are health data (sensitive data under the LGPD). They and your workouts are used with your <strong>consent</strong>, which you give by ticking the checkbox before creating or accessing your account. To withdraw consent, delete your account (section 5).</p>
@@ -197,7 +198,8 @@
         <li><strong>Google</strong>: only if you choose to sign in with Google, to confirm your identity.</li>
         <li><strong>Sentry</strong>: error reports.</li>
         <li><strong>Google Play and RevenueCat</strong>: only if you subscribe to Niveling Premium: payment and subscription status.</li>
-        <li><strong>Groq</strong> (AI provider): only if you generate an AI plan: it receives only the training preferences described above.</li>
+        <li><strong>Groq</strong> (AI provider): only if you use the AI (plan or weekly review): it receives only the training data described above.</li>
+        <li><strong>Expo</strong>: app updates (technical data, none of your progress).</li>
       </ul>
       <p>If you join a <strong>league</strong>, your player name, avatar, rank, title, subscriber badge and league XP are shown to the other players in it. No other data of yours is shown to other players.</p>
       <p>These services may store data on servers outside Brazil. All communication between the app and them is encrypted (HTTPS). We do not sell personal data.</p>
